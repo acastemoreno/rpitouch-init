@@ -20,6 +20,7 @@ defmodule Rpitouch.Application do
     main_viewport_config = Application.get_env(:rpitouch, :viewport)
 
     [
+      supervisor(Rpitouch.Sensor.Supervisor, []),
       supervisor(Scenic, viewports: [main_viewport_config])
     ]
   end
@@ -29,6 +30,7 @@ defmodule Rpitouch.Application do
     main_viewport_config = Application.get_env(:rpitouch, :viewport)
 
     [
+      supervisor(Rpitouch.Sensor.Supervisor, []),
       supervisor(Scenic, viewports: [main_viewport_config])
     ]
   end

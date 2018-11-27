@@ -6,8 +6,8 @@ key_mgmt = System.get_env("NERVES_NETWORK_KEY_MGMT") || "WPA-PSK"
 
 config :nerves_network, :default,
   wlan0: [
-    ssid: "nombre de red",
-    psk: "password",
+    ssid: "SEASME",
+    psk: "SEASME2018-1",
     key_mgmt: String.to_atom(key_mgmt),
     ipv4_address_method: :static,
     ipv4_address: "192.168.0.123",
@@ -32,8 +32,8 @@ config :nerves_init_gadget,
 config :rpitouch, :viewport, %{
   name: :main_viewport,
   # default_scene: {Rpitouch.Scene.Crosshair, nil},
-  default_scene: {Rpitouch.Scene.SysInfo, nil},
-  size: {800, 480},
+  default_scene: {Rpitouch.Scene.Splash, Rpitouch.Scene.Sensor},
+  size: {1000, 600},
   opts: [scale: 1.0],
   drivers: [
     %{

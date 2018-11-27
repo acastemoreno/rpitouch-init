@@ -42,7 +42,8 @@ defmodule Rpitouch.MixProject do
       {:shoehorn, "~> 0.4"},
       {:ring_logger, "~> 0.5"},
       {:scenic, "~> 0.9"},
-      {:scenic_sensor, "~> 0.7"}
+      {:scenic_sensor, "~> 0.7"},
+      {:scenic_clock, ">= 0.0.0"},
     ] ++ deps(@target)
   end
 
